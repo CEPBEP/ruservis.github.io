@@ -17,7 +17,7 @@ var pickupPoints=
                 "marker-color": "#666",
                 "marker-size": "small",
                 "marker-symbol": "circle",
-                "address": "ул. Пасечная, 4 Москва 125008",
+                "address": "Болотная пл., 4",
                 "time_submitted": 1428941074549
             },
             "geometry": {
