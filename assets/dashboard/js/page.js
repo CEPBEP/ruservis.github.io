@@ -236,7 +236,7 @@ var colors=[
 ];
 
        //--------GET JSON ---------//
-$.get('//ruservis.github.io/addresses.json', function(error, response, data){
+$.get('//ruservis.github.io/m.json', function(error, response, data){
   var addresses = data.responseJSON;
 
 
