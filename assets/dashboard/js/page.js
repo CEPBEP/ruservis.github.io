@@ -235,6 +235,7 @@ var colors=[
   ['Purple','5C2E58']
 ];
 
+//--------GET JSON ---------//
 $.get('//goo.gl/xQc6NK', function(error, response, data){
   var addresses = data.responseJSON;
 
