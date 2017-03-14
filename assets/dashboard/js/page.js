@@ -228,7 +228,7 @@ function updateTicker(content) {
 }
 
 var colors=[
-  ['Blue','456E75'],
+  ['Синий','456E75'],
   ['Green','8F9957'],
   ['Orange','B87C51'],
   ['Red','B04548'],
