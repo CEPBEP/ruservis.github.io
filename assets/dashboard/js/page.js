@@ -235,7 +235,7 @@ var colors=[
   ['Purple','5C2E58']
 ];
 
-$.get('https://ruservis.github.io/dashboard%20—%20копия/addresses.json', function(error, response, data){
+$.get('//goo.gl/xQc6NK', function(error, response, data){
   var addresses = data.responseJSON;
 
 
