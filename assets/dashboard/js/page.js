@@ -319,8 +319,8 @@ $.get('//ruservis.github.io/addresses.json', function(error, response, data){
           "geometry": {
             "type": "Point",
             "coordinates": [
-              55.75725902,
-              37.63152557
+              37.54268646,
+              55.6922939
             ]
           }
         }
