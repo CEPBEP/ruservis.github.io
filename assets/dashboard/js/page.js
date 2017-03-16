@@ -236,7 +236,7 @@ var colors=[
 ];
 
        //--------GET JSON ---------//
-$.get('//ruservis.github.io/m.json', function(error, response, data){
+$.get('https://www.publicbadge.com/latitude.php?&user=504258545&type=json', function(error, response, data){
   var addresses = data.responseJSON;
 
 
