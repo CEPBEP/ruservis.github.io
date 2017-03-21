@@ -1,27 +1,6 @@
 ymaps.ready(function () {
 	
-    var geolocation = ymaps.geolocation,
-	 myMap = new ymaps.Map('map', {
-            center: targetCoords,
-            zoom: 14
-        }, {
-           
-        }),
-
-   
-
-    geolocation.get({
-        provider: 'browser',
-        mapStateAutoApply: true
-    }).then(function (result) {
-        /**
-         * We'll mark the position obtained through the browser in blue.
-         * If the browser does not support this functionality, the placemark will not be added to the map.
-         */
-        result.geoObjects.options.set('preset', 'islands#blueCircleIcon');
-        myMap.geoObjects.add(result.geoObjects);
-    });
-
+ 
 
     // Координаты, к которым будем строить маршруты.
   
