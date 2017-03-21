@@ -20,7 +20,7 @@ ymaps.ready(function () {
 
         myMap = new ymaps.Map('YMapsID', {
             center: myCoords,
-            zoom: loc.zoom || 14,
+            zoom: loc.zoom || 11,
             behaviors: ['default', 'scrollZoom']
         });
             
