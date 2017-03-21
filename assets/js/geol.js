@@ -23,6 +23,15 @@ ymaps.ready(function () {
             zoom: loc.zoom || 9,
             behaviors: ['default', 'scrollZoom']
         });
+        
+         // Создаем метку с помощью вспомогательного класса.
+        myPlacemark1 = new ymaps.Placemark([55.8, 37.6], {
+            // Свойства.
+            // Содержимое иконки, балуна и хинта.
+            iconContent: '1',
+            balloonContent: 'Балун',
+            hintContent: 'Стандартный значок метки'
+        });
 
         myMap.geoObjects.add(myPlacemark);
     });
