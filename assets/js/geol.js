@@ -18,7 +18,7 @@ ymaps.ready(function () {
                 iconImageOffset: [-12, -12]
             });
 
-        myMap = new ymaps.Map('YMapsID', {
+        myMap = new ymaps.Map('Map', {
             center: myCoords,
             zoom: loc.zoom || 9,
             behaviors: ['default', 'scrollZoom']
