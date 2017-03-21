@@ -16,16 +16,19 @@ ymaps.ready(function () {
                 iconImageHref: 'https://raw.githubusercontent.com/domservis/domservis.github.io/master/images/258.png',
                 iconImageSize: [64, 64],
                 iconImageOffset: [-12, -12]
-            });
-        
-        
-        
-         .add(new ymaps.Placemark([55.790139, 37.814052], {
+                
+                     .add(new ymaps.Placemark([55.790139, 37.814052], {
             balloonContent: '<strong>blue</strong> color',
             iconCaption: 'Very long but, of course, very interesting text'
         }, {
             preset: 'islands#blueCircleDotIconWithCaption',
             iconCaptionMaxWidth: '50'
+                
+            });
+        
+        
+        
+    
         })),
         
         
