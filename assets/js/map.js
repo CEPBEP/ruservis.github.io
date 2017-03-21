@@ -69,7 +69,7 @@ ymaps.ready(function () {
         pedestrianRouteItem = routeTypeSelector.get(2),
 
     // Метка для начальной точки маршрута.
-        sourcePoint,
+     //   sourcePoint,
 
     // Переменные, в которых будут храниться ссылки на текущий маршрут.
         currentRoute,
