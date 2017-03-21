@@ -3,7 +3,20 @@ ymaps.ready(function () {
     
     
     
-     // Создание метки с круглой активной областью.
+ 
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    var map;
+        // Создание метки с круглой активной областью.
     var circleLayout = ymaps.templateLayoutFactory.createClass('<div class="placemark_layout_container"><div class="circle_layout">#</div></div>');
 
     var circlePlacemark = new ymaps.Placemark(
@@ -19,19 +32,11 @@ ymaps.ready(function () {
                 radius: 25
             }
         }
-    );
-    map.geoObjects.add(circlePlacemark),
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    var map;
+   ) 
+    map.geoObjects.add(circlePlacemark);
+        
+        
+        
     ymaps.geolocation.get().then(function (res) {
         var mapContainer = $('#map'),
             bounds = res.geoObjects.get(0).properties.get('boundedBy'),
