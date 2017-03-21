@@ -1,4 +1,3 @@
-
 ymaps.ready(function () {
 	
     var geolocation = ymaps.geolocation,
@@ -27,7 +26,7 @@ ymaps.ready(function () {
     // Координаты, к которым будем строить маршруты.
   
     // Укажите здесь, к примеру, координаты вашего офиса.
-    var targetCoords = [55.818998, 37.498044],
+    var targetCoords = [55.818998, 37.498044];
 	    
 
     // Инициализируем карту.
@@ -36,7 +35,7 @@ ymaps.ready(function () {
             zoom: 14
         }, {
             // Ограничиваем количество результатов поиска.
-            searchControlResults: 1,
+            searchControlResults: 2,
 
             // Отменяем автоцентрирование к найденным адресам.
             searchControlNoCentering: true,
