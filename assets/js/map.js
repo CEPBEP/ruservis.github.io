@@ -182,7 +182,7 @@ ymaps.ready(function () {
         myMap.geoObjects.remove(currentRoute);
         currentRoute = currentRoutingMode = null;
     }
-	 }),
+	 });
 	
 	
 	
