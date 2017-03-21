@@ -24,7 +24,7 @@ ymaps.ready(function () {
             iconImageOffset: [-5, -38]
         });
 
-    myMap.geoObjects.add(myPlacemark);       
+    myMap.geoObjects.add(myPlacemark),     
            
            
            
