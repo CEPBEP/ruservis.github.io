@@ -25,26 +25,14 @@ ymaps.ready(function () {
             zoom: loc.zoom || 9,
             behaviors: ['default', 'scrollZoom']
         }),
-                    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Собственный значок метки',
-            balloonContent: 'Это красивая метка'
+                       .add(new ymaps.Placemark([55.782392, 37.614924], {
+            balloonContent: 'цвет <strong>детской неожиданности</strong>'
         }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'https://raw.githubusercontent.com/domservis/domservis.github.io/master/images/258.png',
-            // Размеры метки.
-            iconImageSize: [30, 42],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        });
-
-    myMap.geoObjects.add(myPlacemark);
-}),
+            preset: 'islands#circleDotIcon',
+            iconColor: 'yellow'
+        }))
 
   
- myMap.geoObjects.add(myPlacemark),
+
         myMap.geoObjects.add(myPlacemark);
     });
