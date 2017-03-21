@@ -1,7 +1,7 @@
 ymaps.ready(function () {
            
  
-    var myMap,
+   var myMap,
         service = new GeolocationService(),
         myLocation = service.getLocation({
             // Режим получения наиболее точных данных.
