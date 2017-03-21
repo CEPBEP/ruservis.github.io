@@ -25,12 +25,7 @@ ymaps.ready(function () {
             zoom: loc.zoom || 9,
             behaviors: ['default', 'scrollZoom']
         }),
-                       .add(new ymaps.Placemark([55.782392, 37.614924], {
-            balloonContent: 'цвет <strong>детской неожиданности</strong>'
-        }, {
-            preset: 'islands#circleDotIcon',
-            iconColor: 'yellow'
-        }))
+             
 
   
 
