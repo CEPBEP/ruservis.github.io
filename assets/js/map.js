@@ -20,6 +20,28 @@ ymaps.ready(function () {
             // Разрешаем кнопкам нужную длину.
             buttonMaxWidth: 250
         }),
+		   
+		
+		
+		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'images/myIcon.gif',
+            // Размеры метки.
+            iconImageSize: [30, 42],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+}),
+		
 
     // Метка для конечной точки маршрута.
         targetPoint = new ymaps.Placemark(targetCoords, {iconImageSize: [64, 64], // размер иконки
@@ -182,27 +204,10 @@ ymaps.ready(function () {
         myMap.geoObjects.remove(currentRoute);
         currentRoute = currentRoutingMode = null;
     }
-	 }),
+	 });
 
 
 
 
 
-     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Собственный значок метки',
-            balloonContent: 'Это красивая метка'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'images/myIcon.gif',
-            // Размеры метки.
-            iconImageSize: [30, 42],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        });
 
-    myMap.geoObjects.add(myPlacemark);
-});
