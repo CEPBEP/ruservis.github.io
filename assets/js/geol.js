@@ -13,7 +13,7 @@ ymaps.ready(function () {
     myLocation.then(function (loc) {
         var myCoords = [loc.latitude, loc.longitude],
             myPlacemark = new ymaps.Placemark(myCoords, {}, {
-                iconImageHref: 'images/geolocation.png',
+                iconImageHref: 'https://raw.githubusercontent.com/domservis/domservis.github.io/master/images/258.png',
                 iconImageSize: [24, 24],
                 iconImageOffset: [-12, -12]
             });
