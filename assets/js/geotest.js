@@ -49,5 +49,5 @@ ymaps.ready(function () {
     function createMap (state) {
         map = new ymaps.Map('map', state);
     }
-});
+);
 
