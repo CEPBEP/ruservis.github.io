@@ -16,27 +16,6 @@ ymaps.ready(function () {
     
     
     var map;
-        // Создание метки с круглой активной областью.
-    var circleLayout = ymaps.templateLayoutFactory.createClass('<div class="placemark_layout_container"><div class="circle_layout">#</div></div>');
-
-    var circlePlacemark = new ymaps.Placemark(
-        [55.783202, 37.605584], {
-            hintContent: 'Метка с круглым HTML макетом'
-        }, {
-            iconLayout: circleLayout,
-            // Описываем фигуру активной области "Круг".
-            iconShape: {
-                type: 'Circle',
-                // Круг описывается в виде центра и радиуса
-                coordinates: [0, 0],
-                radius: 25
-            }
-        }
-   ) 
-    map.geoObjects.add(circlePlacemark);
-        
-        
-        
     ymaps.geolocation.get().then(function (res) {
         var mapContainer = $('#map'),
             bounds = res.geoObjects.get(0).properties.get('boundedBy'),
@@ -53,6 +32,32 @@ ymaps.ready(function () {
             zoom: 8
         });
     });
+    
+    
+    
+    
+    
+       var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        balloonContentBody: [
+            '<address>',
+            '<strong>Офис Яндекса в Москве</strong>',
+            '<br/>',
+            'Адрес: 119021, Москва, ул. Льва Толстого, 16',
+            '<br/>',
+            'Подробнее: <a href="https://company.yandex.ru/">https://company.yandex.ru</a>',
+            '</address>'
+        ].join('')
+    }, {
+        preset: 'islands#redDotIcon'
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+});
+    
+    
+    
+    
+    
     
     function createMap (state) {
         map = new ymaps.Map('map', state);
