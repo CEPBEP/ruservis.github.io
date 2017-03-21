@@ -1,7 +1,7 @@
 ymaps.ready(function () {
            
  
-   var myMap,
+    var myMap,
         service = new GeolocationService(),
         myLocation = service.getLocation({
             // Режим получения наиболее точных данных.
@@ -25,9 +25,9 @@ ymaps.ready(function () {
             zoom: loc.zoom || 9,
             behaviors: ['default', 'scrollZoom']
         }),
-             
+               
 
   
-
+ myMap.geoObjects.add(myPlacemark),
         myMap.geoObjects.add(myPlacemark);
     });
