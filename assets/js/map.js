@@ -51,7 +51,7 @@ ymaps.ready(function () {
     // Получаем ссылки на нужные элементы управления.
         searchControl = myMap.controls.get('searchControl'),
         geolocationControl = myMap.controls.get('geolocationControl'),
-		this.onGeolocationButtonClick.call(this),
+		
 
     // Создаём выпадающий список для выбора типа маршрута.
         routeTypeSelector = new ymaps.control.ListBox({
