@@ -12,7 +12,7 @@ ymaps.ready(function () {
             zoom: 14
         }, {
             // Ограничиваем количество результатов поиска.
-            searchControlResults: 1,
+            searchControlResults: 2,
 
             // Отменяем автоцентрирование к найденным адресам.
             searchControlNoCentering: true,
