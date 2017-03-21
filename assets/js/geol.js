@@ -22,7 +22,7 @@ ymaps.ready(function () {
             iconCaption: 'Very long but, of course, very interesting text'
         }, {
             preset: 'islands#blueCircleDotIconWithCaption',
-            iconCaptionMaxWidth: '50'
+            iconCaptionMaxWidth: '50'}),
                 
             });
         
