@@ -24,7 +24,7 @@ ymaps.ready(function () {
     
     
     
-       var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+       var myPlacemark = new ymaps.Placemark(Map.getCenter(), {
         balloonContentBody: [
             '<address>',
             '<strong>Офис Яндекса в Москве</strong>',
