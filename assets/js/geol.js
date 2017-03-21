@@ -56,5 +56,5 @@ ymaps.ready(function () {
             
 
         myMap.geoObjects.add(myPlacemark)
-    });
+    })
 
