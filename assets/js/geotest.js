@@ -21,3 +21,22 @@ ymaps.ready(function () {
         map = new ymaps.Map('map', state);
     }
 });
+
+ // Создание метки с круглой активной областью.
+    var circleLayout = ymaps.templateLayoutFactory.createClass('<div class="placemark_layout_container"><div class="circle_layout">#</div></div>');
+
+    var circlePlacemark = new ymaps.Placemark(
+        [55.783202, 37.605584], {
+            hintContent: 'Метка с круглым HTML макетом'
+        }, {
+            iconLayout: circleLayout,
+            // Описываем фигуру активной области "Круг".
+            iconShape: {
+                type: 'Circle',
+                // Круг описывается в виде центра и радиуса
+                coordinates: [0, 0],
+                radius: 25
+            }
+        }
+    );
+    map.geoObjects.add(circlePlacemark);
