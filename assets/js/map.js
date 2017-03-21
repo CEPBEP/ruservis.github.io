@@ -1,9 +1,10 @@
+
 ymaps.ready(function () {
 
     // Координаты, к которым будем строить маршруты.
   
     // Укажите здесь, к примеру, координаты вашего офиса.
-    var targetCoords = [55.818998, 37.498044]
+    var targetCoords = [55.818998, 37.498044],
 	    
 
     // Инициализируем карту.
@@ -12,7 +13,7 @@ ymaps.ready(function () {
             zoom: 14
         }, {
             // Ограничиваем количество результатов поиска.
-            searchControlResults: 2,
+            searchControlResults: 1,
 
             // Отменяем автоцентрирование к найденным адресам.
             searchControlNoCentering: true,
@@ -20,9 +21,6 @@ ymaps.ready(function () {
             // Разрешаем кнопкам нужную длину.
             buttonMaxWidth: 250
         }),
-		   
-		
-		
 
     // Метка для конечной точки маршрута.
         targetPoint = new ymaps.Placemark(targetCoords, {iconImageSize: [64, 64], // размер иконки
@@ -51,7 +49,6 @@ ymaps.ready(function () {
     // Получаем ссылки на нужные элементы управления.
         searchControl = myMap.controls.get('searchControl'),
         geolocationControl = myMap.controls.get('geolocationControl'),
-		
 
     // Создаём выпадающий список для выбора типа маршрута.
         routeTypeSelector = new ymaps.control.ListBox({
@@ -73,7 +70,7 @@ ymaps.ready(function () {
         pedestrianRouteItem = routeTypeSelector.get(2),
 
     // Метка для начальной точки маршрута.
-       sourcePoint,
+        sourcePoint,
 
     // Переменные, в которых будут храниться ссылки на текущий маршрут.
         currentRoute,
@@ -187,9 +184,3 @@ ymaps.ready(function () {
         currentRoute = currentRoutingMode = null;
     }
 	 });
-
-
-
-
-
-
