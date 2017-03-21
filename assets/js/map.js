@@ -6,7 +6,7 @@ ymaps.ready(function () {
             zoom: 14
         }, {
             searchControlProvider: 'yandex#search'
-        });
+        }),
 
    
 
