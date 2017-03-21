@@ -22,7 +22,7 @@ ymaps.ready(function () {
             center: myCoords,
             zoom: loc.zoom || 9,
             behaviors: ['default', 'scrollZoom']
-        }),
+        },
             
             
             
