@@ -17,6 +17,21 @@ ymaps.ready(function () {
                 iconImageSize: [64, 64],
                 iconImageOffset: [-12, -12]
             });
+        
+        
+        
+         .add(new ymaps.Placemark([55.790139, 37.814052], {
+            balloonContent: '<strong>blue</strong> color',
+            iconCaption: 'Very long but, of course, very interesting text'
+        }, {
+            preset: 'islands#blueCircleDotIconWithCaption',
+            iconCaptionMaxWidth: '50'
+        }));
+        
+        
+        
+        
+        
 
         myMap = new ymaps.Map('YMapsID', {
             center: myCoords,
