@@ -24,7 +24,12 @@ ymaps.ready(function () {
             behaviors: ['default', 'scrollZoom']
         });
         
-         // Создаем метку с помощью вспомогательного класса.
+      
+
+        myMap.geoObjects.add(myPlacemark);
+    });
+    
+       // Создаем метку с помощью вспомогательного класса.
         myPlacemark1 = new ymaps.Placemark([55.8, 37.6], {
             // Свойства.
             // Содержимое иконки, балуна и хинта.
@@ -32,7 +37,7 @@ ymaps.ready(function () {
             balloonContent: 'Балун',
             hintContent: 'Стандартный значок метки'
         });
-
-        myMap.geoObjects.add(myPlacemark);
-    });
+    
 });
+
+
