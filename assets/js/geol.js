@@ -40,7 +40,7 @@ ymaps.ready(function () {
             center: myCoords,
             zoom: loc.zoom || 11,
             behaviors: ['default', 'scrollZoom']
-        });
+        };
             
             
             
