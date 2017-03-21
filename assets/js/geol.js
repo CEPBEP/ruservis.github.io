@@ -35,7 +35,6 @@ ymaps.ready(function () {
            
            
            
-  
     var myMap,
         service = new GeolocationService(),
         myLocation = service.getLocation({
@@ -50,24 +49,17 @@ ymaps.ready(function () {
     myLocation.then(function (loc) {
         var myCoords = [loc.latitude, loc.longitude],
             myPlacemark = new ymaps.Placemark(myCoords, {}, {
-                iconImageHref: 'https://raw.githubusercontent.com/domservis/domservis.github.io/master/images/258.png',
+                iconImageHref: 'images/geolocation.png',
                 iconImageSize: [24, 24],
                 iconImageOffset: [-12, -12]
             });
 
-        myMap = new ymaps.Map('Map', {
+        myMap = new ymaps.Map('YMapsID', {
             center: myCoords,
             zoom: loc.zoom || 9,
             behaviors: ['default', 'scrollZoom']
         });
-        
-      
 
         myMap.geoObjects.add(myPlacemark);
     });
-    
-  
-    
 });
-
-
