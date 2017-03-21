@@ -1,9 +1,9 @@
 ymaps.ready(function () {
 	
     var geolocation = ymaps.geolocation,
-        myMap = new ymaps.Map('map', {
-            center: [55, 34],
-            zoom: 10
+	 myMap = new ymaps.Map('map', {
+            center: targetCoords,
+            zoom: 14
         }, {
             searchControlProvider: 'yandex#search'
         });
