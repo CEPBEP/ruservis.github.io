@@ -14,7 +14,7 @@ ymaps.ready(function () {
         var myCoords = [loc.latitude, loc.longitude],
             myPlacemark = new ymaps.Placemark(myCoords, {}, {
                 iconImageHref: 'https://raw.githubusercontent.com/domservis/domservis.github.io/master/images/258.png',
-                iconImageSize: [24, 24],
+                iconImageSize: [64, 64],
                 iconImageOffset: [-12, -12]
             });
 
