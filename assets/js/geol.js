@@ -52,7 +52,7 @@ ymaps.ready(function () {
         .add(myPlacemark1)
         .add(myPlacemark2)
         .add(myGeoObject);
-},
+};
 
     
     
