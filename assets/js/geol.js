@@ -1,6 +1,4 @@
 ymaps.ready(function () {
-           
- 
     var myMap,
         service = new GeolocationService(),
         myLocation = service.getLocation({
@@ -24,10 +22,8 @@ ymaps.ready(function () {
             center: myCoords,
             zoom: loc.zoom || 9,
             behaviors: ['default', 'scrollZoom']
-        }),
-               
+        });
 
-  
- myMap.geoObjects.add(myPlacemark),
         myMap.geoObjects.add(myPlacemark);
     });
+});
