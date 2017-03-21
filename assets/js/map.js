@@ -1,6 +1,4 @@
 ymaps.ready(function () {
-	
- 
 
     // Координаты, к которым будем строить маршруты.
   
@@ -8,10 +6,20 @@ ymaps.ready(function () {
     var targetCoords = [55.818998, 37.498044],
 	    
 
-	
-	
-  
-	    
+    // Инициализируем карту.
+        myMap = new ymaps.Map('map', {
+            center: targetCoords,
+            zoom: 14
+        }, {
+            // Ограничиваем количество результатов поиска.
+            searchControlResults: 1,
+
+            // Отменяем автоцентрирование к найденным адресам.
+            searchControlNoCentering: true,
+
+            // Разрешаем кнопкам нужную длину.
+            buttonMaxWidth: 250
+        }),
 
     // Метка для конечной точки маршрута.
         targetPoint = new ymaps.Placemark(targetCoords, {iconImageSize: [64, 64], // размер иконки
