@@ -22,7 +22,7 @@ ymaps.ready(function () {
         result.geoObjects.options.set('preset', 'islands#blueCircleIcon');
         myMap.geoObjects.add(result.geoObjects);
     });
-}
+
 
     // Координаты, к которым будем строить маршруты.
   
