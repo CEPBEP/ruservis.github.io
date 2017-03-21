@@ -9,21 +9,7 @@ function init() {
             searchControlProvider: 'yandex#search'
         });
 
-    /**
-     * Comparing the position calculated from the user's IP address
-     * and the position detected using the browser.
-     */
-    geolocation.get({
-        provider: 'yandex',
-        mapStateAutoApply: true
-    }).then(function (result) {
-        // We'll mark the position calculated by IP in red.
-        result.geoObjects.options.set('preset', 'islands#redCircleIcon');
-        result.geoObjects.get(0).properties.set({
-            balloonContentBody: 'My location'
-        });
-        myMap.geoObjects.add(result.geoObjects);
-    });
+   
 
     geolocation.get({
         provider: 'browser',
