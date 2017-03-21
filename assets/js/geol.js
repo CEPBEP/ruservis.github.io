@@ -39,7 +39,10 @@ ymaps.ready(function () {
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
             iconImageOffset: [-5, -38]
-        }),
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+}),
 
   
  myMap.geoObjects.add(myPlacemark),
