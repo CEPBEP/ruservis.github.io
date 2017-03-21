@@ -26,7 +26,7 @@ ymaps.ready(function () {
         }, {
             preset: 'islands#blueCircleDotIconWithCaption',
             iconCaptionMaxWidth: '50'
-        }));
+        })),
         
         
         
