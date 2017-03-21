@@ -5,7 +5,7 @@ ymaps.ready(function () {
             center: targetCoords,
             zoom: 14
         }, {
-            searchControlProvider: 'yandex#search'
+           
         }),
 
    
