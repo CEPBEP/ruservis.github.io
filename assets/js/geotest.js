@@ -1,19 +1,6 @@
 ymaps.ready(function () {
     
-    
-    
-    
- 
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
+  
     
     var map;
     ymaps.geolocation.get().then(function (res) {
