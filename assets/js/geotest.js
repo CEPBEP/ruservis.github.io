@@ -1,7 +1,5 @@
+
 ymaps.ready(function () {
-    
-  
-    
     var map;
     ymaps.geolocation.get().then(function (res) {
         var mapContainer = $('#map'),
@@ -16,32 +14,14 @@ ymaps.ready(function () {
         // Если местоположение невозможно получить, то просто создаем карту.
         createMap({
             center: [55.751574, 37.573856],
-            zoom: 8
+            zoom: 2
         });
     });
     
-    
-    
-    
-    
-       var myPlacemark = new ymaps.Placemark(Map.(), {
-        balloonContentBody: [
-            '<address>',
-            '<strong>Офис Яндекса в Москве</strong>',
-            '<br/>',
-            'Адрес: 119021, Москва, ул. Льва Толстого, 16',
-            '<br/>',
-            'Подробнее: <a href="https://company.yandex.ru/">https://company.yandex.ru</a>',
-            '</address>'
-        ].join('')
-    }, {
-        preset: 'islands#redDotIcon'
-    });
-
-    myMap.geoObjects.add(myPlacemark);
+    function createMap (state) {
+        map = new ymaps.Map('map', state);
+    }
 });
-    
-    
     
     
     
@@ -49,4 +29,3 @@ ymaps.ready(function () {
     function createMap (state) {
         map = new ymaps.Map('map', state);
     };
-
