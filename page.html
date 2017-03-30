@@ -4,29 +4,11 @@
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.1/mapbox-gl-directions.js'></script>
-<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.1/mapbox-gl-directions.css' type='text/css' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
-        #buttons {width: 90%;margin: 0 auto; }
-    .button {
-        display: inline-block;
-        position: relative;
-        cursor: pointer;
-        width: 20%;
-        padding: 8px;
-        border-radius: 3px;
-        margin-top: 10px;
-        font-size: 12px;
-        text-align: center;
-        color: #fff;
-        background: #ee8a65;
-        font-family: sans-serif;
-        font-weight: bold;
-    }
     </style>
 </head>
 <body>
@@ -35,8 +17,37 @@
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoibmlnaHRtYXIiLCJhIjoiY2l3dXE0NHV5MDBhajJ6c2FnM2k3OGdxdiJ9._IKWkADq_79v0aWCpQqgVg';
 var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/streets-v9'
+    style: 'mapbox://styles/mapbox/light-v9',
+    center: [-74.0066, 40.7135],
+    zoom: 15,
+    pitch: 45,
+    bearing: -17.6,
+    container: 'map'
+});
+
+// the 'building' layer in the mapbox-streets vector source contains building-height
+// data from OpenStreetMap.
+map.on('load', function() {
+    map.addLayer({
+        'id': '3d-buildings',
+        'source': 'composite',
+        'source-layer': 'building',
+        'filter': ['==', 'extrude', 'true'],
+        'type': 'fill-extrusion',
+        'minzoom': 15,
+        'paint': {
+            'fill-extrusion-color': '#aaa',
+            'fill-extrusion-height': {
+                'type': 'identity',
+                'property': 'height'
+            },
+            'fill-extrusion-base': {
+                'type': 'identity',
+                'property': 'min_height'
+            },
+            'fill-extrusion-opacity': .6
+        }
+    });
 });
 </script>
 
