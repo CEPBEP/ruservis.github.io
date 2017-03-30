@@ -45,17 +45,7 @@
     <li id='button-de' class='button'>German</li>
     <li id='button-es' class='button'>Spanish</li>
 </ul>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoibmlnaHRtYXIiLCJhIjoiY2l3dXE0NHV5MDBhajJ6c2FnM2k3OGdxdiJ9._IKWkADq_79v0aWCpQqgVg';
-document.getElementById('buttons').addEventListener('click', function(event) {
-    var language = event.target.id.substr('button-'.length);
-    // Use setLayoutProperty to set the value of a layout property in a style layer.
-    // The three arguments are the id of the layer, the name of the layout property,
-    // and the new property value.
-    map.setLayoutProperty('country-label-lg', 'text-field', '{name_' + language + '}');
-});
 
-</script>
     
     
     
@@ -78,6 +68,15 @@ var map = new mapboxgl.Map({
 map.addControl(new MapboxDirections({
     accessToken: mapboxgl.accessToken
 }), 'top-left');
+    
+    document.getElementById('buttons').addEventListener('click', function(event) {
+    var language = event.target.id.substr('button-'.length);
+    // Use setLayoutProperty to set the value of a layout property in a style layer.
+    // The three arguments are the id of the layer, the name of the layout property,
+    // and the new property value.
+    map.setLayoutProperty('country-label-lg', 'text-field', '{name_' + language + '}');
+});
+    
 </script>
 
 </body>
