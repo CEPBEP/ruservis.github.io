@@ -1,6 +1,54 @@
-https://www.publicbadge.com/latitude.php?&user=504258545&type=json
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
 
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibmlnaHRtYXIiLCJhIjoiY2l3dXE0NHV5MDBhajJ6c2FnM2k3OGdxdiJ9._IKWkADq_79v0aWCpQqgVg';
+var map = new mapboxgl.Map({
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [37.64, 55.76],
+    zoom: 16,
+    pitch: 65,
+    bearing: 37.6,
+    container: 'map'
+});
+// the 'building' layer in the mapbox-streets vector source contains building-height
+// data from OpenStreetMap.
+map.on('load', function() {
+    map.addLayer({
+        'id': '3d-buildings',
+        'source': 'composite',
+        'source-layer': 'building',
+        'filter': ['==', 'extrude', 'true'],
+        'type': 'fill-extrusion',
+        'minzoom': 15,
+        'paint': {
+            'fill-extrusion-color': '#aaa',
+            'fill-extrusion-height': {
+                'type': 'identity',
+                'property': 'height'
+            },
+            'fill-extrusion-base': {
+                'type': 'identity',
+                'property': 'min_height'
+            },
+            'fill-extrusion-opacity': .6
+        }
+    });
+});
+</script>
 
-
-
-<iframe src='https://www.publicbadge.com/latitude.php?&user=504258545&type=json' width='600' height='400'></iframe>
+</body>
+</html>
