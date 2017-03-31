@@ -1,8 +1,8 @@
 {
     "type": "FeatureCollection",
     "features": [
-        {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [53.831903, 34.411961]}, "properties": {"balloonContent": "Содержимое балуна", "clusterCaption": "Еще одна метка", "hintContent": "Текст подсказки"}},
+        {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [56.831903, 34.411961]}, "properties": {"balloonContent": "Содержимое балуна", "clusterCaption": "Еще одна метка", "hintContent": "Текст подсказки"}},
         {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [57.963338, 35.085466]}, "properties": {"balloonContent": "Содержимое балуна", "clusterCaption": "Еще одна метка", "hintContent": "Текст подсказки"}},
-        {"type": "Feature", "id": 2, "geometry": {"type": "Point", "coordinates": [54.763338, 34.363486]}, "properties": {"balloonContent": "Содержимое балуна", "clusterCaption": "Еще одна метка", "hintContent": "Текст подсказки"}}
+        {"type": "Feature", "id": 2, "geometry": {"type": "Point", "coordinates": [58.763338, 34.363486]}, "properties": {"balloonContent": "Содержимое балуна", "clusterCaption": "Еще одна метка", "hintContent": "Текст подсказки"}}
     ]
 }
