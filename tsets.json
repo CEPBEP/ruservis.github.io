@@ -1,0 +1,8 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [37.411961,55.831903]}, "properties": {"balloonContent": "Содержимое балуна", "clusterCaption": "Еще одна метка", "hintContent": "Текст подсказки"}},
+        {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [37.565466,55.763338]}, "properties": {"balloonContent": "Содержимое балуна", "clusterCaption": "Еще одна метка", "hintContent": "Текст подсказки"}},
+        {"type": "Feature", "id": 2, "geometry": {"type": "Point", "coordinates": [37.563486,55.763338]}, "properties": {"balloonContent": "Содержимое балуна", "clusterCaption": "Еще одна метка", "hintContent": "Текст подсказки"}}
+    ]
+}
